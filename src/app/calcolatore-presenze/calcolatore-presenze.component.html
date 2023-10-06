@@ -1,0 +1,26 @@
+<div class="container">
+<div>
+  <img src="assets/logo-sja.png" alt="Logo" />
+  <h1>Calcolo Percentuale Presenze e Assenze</h1>
+</div>
+<div class="app">
+  <label for="oreLezione">Ore Totali di Lezione:</label>
+  <input type="number" id="oreLezione" [(ngModel)]="oreLezione">
+  <br>
+  <label for="presenze">Ore di Presenze:</label>
+  <input type="number" id="presenze" [(ngModel)]="presenze">
+  <br>
+  <label for="assenze">Ore di Assenze:</label>
+  <input type="number" id="assenze" [(ngModel)]="assenze">
+  <br>
+  <button (click)="calcolaPercentuali()">Calcola</button>
+  <br>
+  <div *ngIf="percentualePresenze !== null" >
+    <p class="percentuale-presenze">Presenze: {{ percentualePresenze }}%</p>
+  </div>
+
+  <div *ngIf="percentualeAssenze !== null">
+    <p class="percentuale-assenze">Assenze: {{ percentualeAssenze }}%</p>
+  </div>
+</div>
+</div>
